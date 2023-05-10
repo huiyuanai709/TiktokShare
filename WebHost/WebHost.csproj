@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+        <PackageReference Include="Serilog.AspNetCore" Version="7.0.0-dev-00302" />
+        <PackageReference Include="SourceGeneratorPower.Services.Abstractions" Version="1.0.0-preview2" />
+        <PackageReference Include="SourceGeneratorPower.Services.SourceGenerator" Version="1.0.0-preview2" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Identity\Identity.Application\Identity.Application.csproj" />
+    </ItemGroup>
+
+</Project>
